@@ -1,6 +1,6 @@
 const MAX_SCALE = 2.5
 const INFLUENCE_RADIUS = 100
-const NUM_DENSITY = 35
+const NUM_DENSITY = 45
 
 let cursorHighlight = null;
 let container = null;
@@ -18,7 +18,7 @@ function loadGrid() {
         cursorHighlight.style.left = `${event.clientX}px`;
         cursorHighlight.style.top = `${event.clientY}px`;
     });
-    container = document.querySelector('.container');
+    container = document.querySelector('.workspace');
     width = container.clientWidth
     height = container.clientHeight
 

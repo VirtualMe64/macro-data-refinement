@@ -8,28 +8,34 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: #c5c5c5;
     font-family: 'IBM Plex Mono', monospace;
+    background-color: #00274e;
 }
 
-.container {
-    border-radius: 20px;
-    margin-top: 100px;
+.screen {
+    width: calc(100% - 200px);;
+    height: calc(100% - 200px);;
+    margin: 100px;
+    border-radius: 50px;
+    display: flex;
+    overflow: hidden;
+}
+
+.workspace {
+    padding: 30px;
     display: grid;
     gap: 5px;
-    width: 920px;
-    height: 620px;
     background-color: #071124;
-    padding: 10px;
+    flex-grow: 5
 }
 
-.container p {
+.workspace p {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
     font-size: 14px;
-    color: #7d9eb1;
+    color: #97ffff;
     border-radius: 4px;
     width: 100%; /* Maintain responsiveness */
     height: 100%; /* Prevent shifting */

@@ -1,3 +1,5 @@
+// todo: make all the numbers wiggle a bit
+// todo: scrolling
 const MAX_SCALE = 2.5
 const INFLUENCE_RADIUS = 100
 const NUM_DENSITY = 45
@@ -12,6 +14,8 @@ function randNum() {
 }
 
 function loadGrid() {
+    console.log("YO")
+    loaded = false;
     cursorHighlight = document.getElementById('cursor-highlight');
 
     document.addEventListener('mousemove', (event) => {
@@ -19,6 +23,7 @@ function loadGrid() {
         cursorHighlight.style.top = `${event.clientY}px`;
     });
     container = document.querySelector('.workspace');
+    container.innerHTML = ""
     width = container.clientWidth
     height = container.clientHeight
 
@@ -64,4 +69,5 @@ function computeScale(dist) {
 }
 
 document.onmousemove = handlemousemove
+window.onresize = loadGrid
 window.onload = loadGrid

@@ -18,10 +18,27 @@ body {
     margin: 100px;
     border-radius: 50px;
     display: flex;
+    flex-direction: column;
     overflow: hidden;
 }
 
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    background-color: #071124;
+}
+
+.header h1 {
+    color: #97ffff;
+}
+
 .workspace {
+    border-top: 3px double #97ffff;
+    border-bottom: 3px double #97ffff;
     padding: 30px;
     display: grid;
     gap: 5px;
@@ -40,6 +57,25 @@ body {
     width: 100%; /* Maintain responsiveness */
     height: 100%; /* Prevent shifting */
     overflow: visible;
+}
+
+.footer {
+    background-color: #071124;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer div {
+    margin: 30px;
+    padding: 5px;
+    width: 100%;
+    border: 2px solid #97ffff;
+}
+
+.footer p {
+    text-align: center;
+    color: #97ffff;
 }
 
 #cursor-highlight {

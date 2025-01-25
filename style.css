@@ -8,14 +8,14 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Courier new', monospace;
     background-color: #00274e;
 }
 
 .screen {
-    width: calc(100% - 200px);;
-    height: calc(100% - 200px);;
-    margin: 100px;
+    width: calc(100% - 50px);;
+    height: calc(100% - 50px);;
+    margin: 25px;
     border-radius: 50px;
     display: flex;
     flex-direction: column;
@@ -47,12 +47,14 @@ body {
 }
 
 .workspace p {
+    opacity: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
-    font-size: 14px;
+    font-size: 16px;
     color: #97ffff;
+    text-shadow: 0 0 8px rgba(127, 219, 255, 0.4); /* Number glow */
     border-radius: 4px;
     width: 100%; /* Maintain responsiveness */
     height: 100%; /* Prevent shifting */
@@ -80,11 +82,11 @@ body {
 
 #cursor-highlight {
     position: fixed;
-    width: 120px; /* Size of the brightened area */
-    height: 120px;
+    width: 240px; /* Size of the brightened area */
+    height: 240px;
     border-radius: 50%; /* Make it circular */
     pointer-events: none; /* Ensure it doesn't block interactions */
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 50%);
     transform: translate(-50%, -50%); /* Center the circle at the cursor */
     mix-blend-mode: screen; /* Blend the highlight with the background */
     z-index: 1000; /* Ensure it appears above everything else */

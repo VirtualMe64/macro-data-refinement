@@ -2,7 +2,8 @@
 // todo: scrolling
 const MAX_SCALE = 2.5
 const INFLUENCE_RADIUS = 100
-const NUM_DENSITY = 45
+const NUM_DENSITY = 40
+const BASE_OPACITY = 70
 
 let cursorHighlight = null;
 let container = null;
@@ -57,8 +58,12 @@ function updateFontSizes(mouseX, mouseY) {
         let dist = Math.sqrt(Math.pow(mouseX - x, 2) + Math.pow(mouseY - y, 2))
         if (dist > INFLUENCE_RADIUS) {
             child.style.transform = `scale(1)`
+            child.style.opacity = `${BASE_OPACITY}%`
         } else {
-            child.style.transform = `scale(${computeScale(dist)})`
+            let scale = computeScale(dist)
+            let opacity = BASE_OPACITY + (100 - BASE_OPACITY) * (scale / MAX_SCALE)
+            child.style.transform = `scale(${scale})`
+            child.style.opacity = `${opacity}%`
         }
     }
 }

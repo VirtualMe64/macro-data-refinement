@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #c5c5c5;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.container {
+    border-radius: 20px;
+    margin-top: 100px;
+    display: grid;
+    gap: 5px;
+    width: 920px;
+    height: 620px;
+    background-color: #071124;
+    padding: 10px;
+}
+
+.container p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 14px;
+    color: #7d9eb1;
+    border-radius: 4px;
+    width: 100%; /* Maintain responsiveness */
+    height: 100%; /* Prevent shifting */
+    overflow: visible;
+}
+
+#cursor-highlight {
+    position: fixed;
+    width: 120px; /* Size of the brightened area */
+    height: 120px;
+    border-radius: 50%; /* Make it circular */
+    pointer-events: none; /* Ensure it doesn't block interactions */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+    transform: translate(-50%, -50%); /* Center the circle at the cursor */
+    mix-blend-mode: screen; /* Blend the highlight with the background */
+    z-index: 1000; /* Ensure it appears above everything else */
+    transition: background 0.2s ease-out; /* Smooth transition for dynamic effects */
+}
